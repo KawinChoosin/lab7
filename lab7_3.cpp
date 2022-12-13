@@ -1,27 +1,26 @@
 #include<iostream>
+#include<string>
 
 using namespace std;
-int adiff(int A,int B){
-  int c;
-  A=A%360;
-  B=B%360;
-  c=A-B;
-   if(c<0){
-    c=-c;
-  }
-  if(c>180){
-    c=(360-c);
-  }
-  return c;
-  }
 
 int main(){
-  cout << adiff(180,270)<<endl;
-  cout << adiff(210,45)<<endl;
-  cout << adiff(0,360)<<endl;
-  cout << adiff(10,350)<<endl;
-  cout << adiff(95,260)<<endl;
-  cout << adiff(90,-90)<<endl;
-  cout << adiff(1000,280)<<endl;
-  cout << adiff(60,244)<<endl;
+	
+	string name[] = {"Luffy","Zoro","Sanji","Nami","Naruto","Sakura","All Might","Saitama","Eren","Mikasa"};
+	int id[] = {123,196,225,329,420,451,515,666,690,787};
+	double gpa[] = {1.50,2.12,4.00,3.69,2.50,2.76,3.54,2.14,3.50,1.88};
+    int i=0;
+    double k;
+    cout<<"Please input GPA: ";
+    cin>>k;
+    while(i<10){
+        if(gpa[i]>=k){
+        cout<<id[i]<<" "<<name[i]<<" "<<gpa[i]<<endl;
+        
+        }
+    i++;
+    }
+    
+    
+		
+	return 0;
 }
